@@ -69,3 +69,16 @@ async def chat_endpoint(request: Request, payload: ChatRequest):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"An internal server error occurred: {str(e)}"
         )
+
+@router.get("/db-status")
+async def db_status_endpoint(request: Request):
+    """
+    GET /api/db-status
+    Diagnostics endpoint to query the number of loaded chunks.
+    """
+    rag_service = getattr(request.app.state, "rag_service", None)
+    if not rag_service:
+        return {"error": "RAG service not initialized"}
+    count = rag_service.vector_store.get_chunk_count()
+    return {"chunk_count": count}
+
