@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueAI Labs - GenAI Assistant with RAG</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-glows">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar / Settings Panel -->
+        <aside class="sidebar glass">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon"><i data-lucide="cpu"></i></span>
+                    <span class="logo-text">TrueAI Labs</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="status-panel glass-card">
+                    <h3>SYSTEM STATUS</h3>
+                    <div class="status-item">
+                        <span class="status-dot healthy"></span>
+                        <span class="status-label">Backend API:</span>
+                        <span id="backend-status" class="status-value">Checking...</span>
+                    </div>
+                    <div class="status-item">
+                        <i data-lucide="key-round" class="sidebar-icon"></i>
+                        <span class="status-label">API Auth:</span>
+                        <span class="status-value highlight">Gemini active</span>
+                    </div>
+                </div>
+
+                <div class="session-panel glass-card">
+                    <h3>SESSION MANAGER</h3>
+                    <p class="session-desc">Sessions segment chat history in the LLM memory context.</p>
+                    <div class="session-id-box">
+                        <span class="session-lbl">Session ID:</span>
+                        <span id="session-id-display" class="session-id-val">...</span>
+                    </div>
+                    <button id="new-chat-btn" class="btn btn-secondary">
+                        <i data-lucide="plus"></i>
+                        New Chat Session
+                    </button>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <p>TRUEAILAB Assignment v1.0</p>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header glass">
+                <div class="header-title-wrapper">
+                    <h1>Grounded GenAI RAG Assistant</h1>
+                    <p>Answering questions strictly verified against the company knowledge base</p>
+                </div>
+                <div class="header-actions">
+                    <span class="badge badge-rag"><i data-lucide="shield-check"></i> RAG Active</span>
+                </div>
+            </header>
+
+            <!-- Message Feed -->
+            <div id="message-feed" class="message-feed">
+                <!-- Welcome Card -->
+                <div class="welcome-card glass-card">
+                    <div class="welcome-icon"><i data-lucide="sparkles"></i></div>
+                    <h2>Welcome to the TrueAI Portal Assistant!</h2>
+                    <p>This assistant has access to the official corporate manuals. You can ask about:</p>
+                    <div class="suggested-chips">
+                        <button class="suggested-chip">How do I reset my password?</button>
+                        <button class="suggested-chip">What is the leave policy?</button>
+                        <button class="suggested-chip">How can I request a monitor?</button>
+                        <button class="suggested-chip">Can I work from home on Wednesdays?</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Analytics Panel -->
+            <div id="metrics-panel" class="metrics-panel glass hidden">
+                <div class="metric-item">
+                    <i data-lucide="binary"></i>
+                    <div class="metric-text">
+                        <span class="metric-label">Retrieved Chunks</span>
+                        <span id="metric-chunks" class="metric-val">-</span>
+                    </div>
+                </div>
+                <div class="metric-item">
+                    <i data-lucide="zap"></i>
+                    <div class="metric-text">
+                        <span class="metric-label">Tokens Consumed</span>
+                        <span id="metric-tokens" class="metric-val">-</span>
+                    </div>
+                </div>
+                <div class="metric-item">
+                    <i data-lucide="clock"></i>
+                    <div class="metric-text">
+                        <span class="metric-label">Response Time</span>
+                        <span id="metric-latency" class="metric-val">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input area -->
+            <footer class="chat-input-area glass">
+                <form id="chat-form" class="chat-form">
+                    <input type="text" id="chat-input" placeholder="Ask a question about password resets, leaves, WFH policies..." autocomplete="off" required>
+                    <button type="submit" id="send-btn" class="btn btn-primary">
+                        <span class="btn-text">Send</span>
+                        <i data-lucide="send"></i>
+                        <span class="loader hidden"></span>
+                    </button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

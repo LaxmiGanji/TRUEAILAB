@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Resetting User Password",
+    "content": "To reset your corporate password, navigate to the Settings page from your profile dropdown in the top-right corner. Go to Security > Password Management. Click on 'Reset Password' and follow the on-screen instructions to verify your identity via email OTP. Passwords must be at least 12 characters long and contain a mix of uppercase letters, lowercase letters, numbers, and special characters. Do not reuse your previous three passwords."
+  },
+  {
+    "title": "Annual and Sick Leave Policy",
+    "content": "Full-time employees at TrueAI Labs are entitled to 20 days of paid annual leave and 10 days of sick leave per calendar year. Annual leave requests must be submitted through the HR Portal at least 5 business days in advance and require approval from your direct manager. Sick leaves can be taken without prior notice in case of sudden illness, but a medical certificate must be uploaded if the sick leave extends beyond 3 consecutive days."
+  },
+  {
+    "title": "Expense Reimbursement Guidelines",
+    "content": "Employees can claim reimbursements for business-related expenses such as client lunches, project software, and travel costs. All claims must be submitted via the Finance Portal within 30 days of the expense incurrence. A valid tax invoice or digital receipt is mandatory for all claims exceeding $10. Reimbursements are processed in the monthly payroll cycle. Personal expenditures or non-approved software purchases will be automatically rejected."
+  },
+  {
+    "title": "Work from Home (WFH) and Remote Work Policy",
+    "content": "TrueAI Labs operates on a hybrid model where employees are expected to work from the office on Tuesdays and Thursdays. Mondays, Wednesdays, and Fridays are optional remote work days. Core working hours are from 10:00 AM to 4:00 PM local time, during which employees must be online and reachable on Slack. Any long-term full-remote arrangements require written approval from the Department Head and HR."
+  },
+  {
+    "title": "IT Hardware and Asset Request Protocol",
+    "content": "New laptops, monitors, or accessories can be requested via the IT Service Desk. Standard issue hardware includes a MacBook Pro 14\" or a Lenovo ThinkPad T14, along with a 27\" external monitor. Upgrades or custom hardware requests (e.g. higher RAM, specific GPU) require a brief justification and approval from your team's budget owner. Damaged hardware should be returned to the IT desk on the 3rd floor for repair or replacement."
+  },
+  {
+    "title": "Office Timing and Building Access Card",
+    "content": "The TrueAI Labs office is open 24/7. Building access is controlled via RFID keycards issued on your first day. Sharing access cards with non-employees or tailgating is strictly prohibited and constitutes a security violation. Visitors must be pre-registered via the Reception Portal at least 24 hours in advance and must be accompanied by an employee at all times while in the building."
+  },
+  {
+    "title": "Health and Wellness Insurance Coverage",
+    "content": "TrueAI Labs provides comprehensive health insurance covering medical, dental, and vision care for all full-time employees and up to two dependents. The policy covers 100% of hospitalization charges at network hospitals and up to 80% at non-network hospitals. In addition, employees are eligible for a $300 annual wellness stipend, which can be claimed for gym memberships, fitness trackers, or mental health counseling."
+  },
+  {
+    "title": "Intellectual Property and Confidentiality NDA Policy",
+    "content": "All code, algorithms, research papers, designs, and business strategies developed during your employment at TrueAI Labs remain the exclusive intellectual property of the company. Employees are bound by the Non-Disclosure Agreement (NDA) signed at onboarding. Sharing proprietary codebase fragments, API keys, or customer details outside the secure company network is a severe violation and may lead to immediate termination and legal action."
+  }
+]
