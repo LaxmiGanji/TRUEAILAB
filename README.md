@@ -230,3 +230,14 @@ The application is structured to be extremely easy to deploy. Since the frontend
    * `SIMILARITY_THRESHOLD`: `0.55`
    * `TOP_K`: `3`
 6. Click **Deploy Web Service**. Render will build and host your RAG assistant!
+
+---
+
+## Live Application Screenshots
+
+### 1. Active Chat & Grounded Response
+![Active Chat & Grounded Response](screenshots/chat_response.png)
+
+### 2. Welcome Portal Dashboard
+![Welcome Portal Dashboard](screenshots/welcome_screen.png)
+
